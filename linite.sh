@@ -1,29 +1,29 @@
-sudo apt update
-sudo apt upgrade
+packagesNeeded='neofetch vim python python3-pip wget curl snapd'
 
-sudo apt install btop neofetch vim python3-pip wget curl
+if [ -x "$(command -v apt)" ];       then sudo apt install $packagesNeeded
+elif [ -x "$(command -v pacman])";    then sudo pacman -S $packagesNeeded
 
-
-### Install Signal (copied from Signal website)
-
-# NOTE: These instructions only work for 64 bit Debian-based
-# Linux distributions such as Ubuntu, Mint etc.
-
-# 1. Install our official public software signing key
-wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
-cat signal-desktop-keyring.gpg | sudo tee -a /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null
-
-# 2. Add our repository to your list of repositories
-echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' |\
-  sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
-
-# 3. Update your package database and install signal
-sudo apt update && sudo apt install signal-desktop
-
-
-sudo snap install spotify
-sudo snap install discord
-sudo snap install vlc
-sudo snap install chromium
+sudo snap install spotify discord vlc chromium signal-desktop btop
 
 pip install notebook
+
+
+
+
+
+
+#### Install Signal (copied from Signal website)
+
+## NOTE: These instructions only work for 64 bit Debian-based
+## Linux distributions such as Ubuntu, Mint etc.
+#
+## 1. Install our official public software signing key
+#wget -O- https://updates.signal.org/desktop/apt/keys.asc | gpg --dearmor > signal-desktop-keyring.gpg
+#cat signal-desktop-keyring.gpg | sudo tee -a /usr/share/keyrings/signal-desktop-keyring.gpg > /dev/null
+#
+## 2. Add our repository to your list of repositories
+#echo 'deb [arch=amd64 signed-by=/usr/share/keyrings/signal-desktop-keyring.gpg] https://updates.signal.org/desktop/apt xenial main' |\
+#  sudo tee -a /etc/apt/sources.list.d/signal-xenial.list
+#
+## 3. Update your package database and install signal
+#sudo apt update && sudo apt install signal-desktop
