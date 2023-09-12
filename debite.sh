@@ -1,6 +1,6 @@
 sudo apt update && sudo apt upgrade
 
-sudo apt install -y neofetch vim python3 python3-pip wget curl btop flatpak steam
+sudo apt install -y neofetch vim python3 python3-pip wget curl btop flatpak steam firefox
 
 #### Add flathub to flatpak
 
