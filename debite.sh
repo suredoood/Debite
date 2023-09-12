@@ -18,6 +18,12 @@ sudo flatpak install flathub org.signal.Signal
 
 sudo flatpak install flathub com.discordapp.Discord
 
+#### Install Grub Customizer
+
+sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+sudo apt update
+sudo apt install grub-customizer
+
 echo "You will now be prompted about installing several programs, these were originally for Shervin. If you don't know what they are, feel free to deny all of them. I won't take it personally, I promise."
 
 ### Prompt for installing rclone, one-liner from https://rclone.org/install/#linux, prompt from https://stackoverflow.com/questions/1885525/how-do-i-prompt-a-user-for-confirmation-in-bash-script
