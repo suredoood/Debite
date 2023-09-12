@@ -18,6 +18,7 @@ sudo flatpak install flathub org.signal.Signal
 
 sudo flatpak install flathub com.discordapp.Discord
 
+echo "You will now be prompted about installing several programs, these were originally for Shervin. If you don't know what they are, feel free to deny all of them. I won't take it personally, I promise."
 
 ### Prompt for installing rclone, one-liner from https://rclone.org/install/#linux, prompt from https://stackoverflow.com/questions/1885525/how-do-i-prompt-a-user-for-confirmation-in-bash-script
 echo
@@ -27,4 +28,13 @@ echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     sudo -v ; curl https://rclone.org/install.sh | sudo bash
+fi
+
+echo
+echo
+read -p "Do you want to install zotero? (y/n)" -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    curl -sL https://raw.githubusercontent.com/retorquere/zotero-deb/master/install.sh | sudo bash
 fi
