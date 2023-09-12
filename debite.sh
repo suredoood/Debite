@@ -1,6 +1,6 @@
 sudo apt update && sudo apt upgrade
 
-sudo apt install -y neofetch vim python3 python3-pip wget curl btop flatpak steam firefox
+sudo apt install -y neofetch vim python3 python3-pip wget curl htop btop flatpak steam firefox
 
 #### Add flathub to flatpak
 
@@ -37,4 +37,6 @@ echo    # (optional) move to a new line
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     curl -sL https://raw.githubusercontent.com/retorquere/zotero-deb/master/install.sh | sudo bash
+    sudo apt update
+    sudo apt install zotero
 fi
