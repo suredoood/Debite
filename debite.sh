@@ -28,6 +28,18 @@ flatpak install flathub com.valvesoftware.Steam
 #sudo apt update
 #sudo apt install grub-customizer
 
+
+echo
+echo
+read -p "Do you want to install nvidia drivers? (y/n)" -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    deb http://deb.debian.org/debian/ bookworm main contrib non-free non-free-firmware
+    sudo apt update
+    sudo apt install nvidia-driver firmware-misc-nonfree
+fi
+
 echo "You will now be prompted about installing several programs, these were originally for Shervin. If you don't know what they are, feel free to deny all of them. I won't take it personally, I promise."
 
 ### Prompt for installing rclone, one-liner from https://rclone.org/install/#linux, prompt from https://stackoverflow.com/questions/1885525/how-do-i-prompt-a-user-for-confirmation-in-bash-script
@@ -50,3 +62,7 @@ then
     sudo apt update
     sudo apt install zotero
 fi
+
+
+
+
