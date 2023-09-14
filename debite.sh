@@ -22,11 +22,11 @@ sudo flatpak install flathub com.discordapp.Discord
 
 flatpak install flathub com.valvesoftware.Steam
 
-#### Install Grub Customizer
+#### Install Grub Customizer (removed for now)
 
-sudo add-apt-repository ppa:danielrichter2007/grub-customizer
-sudo apt update
-sudo apt install grub-customizer
+#sudo add-apt-repository ppa:danielrichter2007/grub-customizer
+#sudo apt update
+#sudo apt install grub-customizer
 
 echo "You will now be prompted about installing several programs, these were originally for Shervin. If you don't know what they are, feel free to deny all of them. I won't take it personally, I promise."
 
