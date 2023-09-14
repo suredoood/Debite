@@ -37,7 +37,7 @@ if [[ $REPLY =~ ^[Yy]$ ]]
 then
     deb http://deb.debian.org/debian/ bookworm main contrib non-free non-free-firmware
     sudo apt update
-    sudo apt install nvidia-driver firmware-misc-nonfree
+    sudo apt install -y -m nvidia-driver firmware-misc-nonfree
 fi
 
 echo "You will now be prompted about installing several programs, these were originally for Shervin. If you don't know what they are, feel free to deny all of them. I won't take it personally, I promise."
