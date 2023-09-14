@@ -1,6 +1,6 @@
 sudo apt update && sudo apt upgrade
 
-sudo apt install -y neofetch vim python3 python3-pip wget curl htop btop flatpak steam firefox
+sudo apt install -y -m neofetch vim python3 python3-pip wget curl htop btop flatpak
 
 #### Add flathub to flatpak
 
@@ -17,6 +17,10 @@ sudo flatpak install flathub org.signal.Signal
 #### Install Discord
 
 sudo flatpak install flathub com.discordapp.Discord
+
+#### Install Steam
+
+flatpak install flathub com.valvesoftware.Steam
 
 #### Install Grub Customizer
 
