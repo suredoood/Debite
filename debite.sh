@@ -46,6 +46,32 @@ then
     sudo apt install -y -m nvidia-driver firmware-misc-nonfree
 fi
 
+echo
+echo
+read -p "Do you want to install flux (blue light filter)? (y/n)" -n 1 -r
+echo    # (optional) move to a new line
+if [[ $REPLY =~ ^[Yy]$ ]]
+then
+    #instructions from xflux-gui github (https://github.com/xflux-gui/fluxgui)
+    sudo apt install -y -m python3-pexpect python3-distutils python3-xdg gir1.2-ayatanaappindicator3-0.1 gir1.2-gtk-3.0 redshift
+    # Download fluxgui
+    cd /tmp
+    git clone "https://github.com/xflux-gui/fluxgui.git"
+    cd fluxgui
+    ./download-xflux.py
+    
+    # EITHER install system wide
+    sudo ./setup.py install --record installed.txt
+    
+    # EXCLUSIVE OR, install in your home directory
+    #
+    # The fluxgui program installs
+    # into ~/.local/bin, so be sure to add that to your PATH if installing
+    # locally. In particular, autostarting fluxgui in Gnome will not work
+    # if the locally installed fluxgui is not on your PATH.
+    ./setup.py install --user --record installed.txt
+fi
+
 echo "You will now be prompted about installing several programs, these were originally for Shervin. If you don't know what they are, feel free to deny all of them. I won't take it personally, I promise."
 
 ### Prompt for installing rclone, one-liner from https://rclone.org/install/#linux, prompt from https://stackoverflow.com/questions/1885525/how-do-i-prompt-a-user-for-confirmation-in-bash-script
