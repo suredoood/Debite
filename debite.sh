@@ -1,3 +1,4 @@
+
 sudo apt update && sudo apt upgrade
 
 sudo apt install -y -m neofetch vim python3 python3-pip wget curl htop btop flatpak
@@ -21,6 +22,10 @@ sudo flatpak install flathub com.discordapp.Discord
 #### Install Steam
 
 flatpak install flathub com.valvesoftware.Steam
+
+### Configure Flatpak to have access to icons and themes
+flatpak --user override --filesystem=/home/$USER/.icons/:ro
+flatpak --user override --filesystem=/usr/share/icons/:ro
 
 #### Install Grub Customizer (removed for now)
 
