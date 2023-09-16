@@ -69,7 +69,7 @@ then
     # into ~/.local/bin, so be sure to add that to your PATH if installing
     # locally. In particular, autostarting fluxgui in Gnome will not work
     # if the locally installed fluxgui is not on your PATH.
-    ./setup.py install --user --record installed.txt
+    # ./setup.py install --user --record installed.txt
 fi
 
 echo "You will now be prompted about installing several programs, these were originally for Shervin. If you don't know what they are, feel free to deny all of them. I won't take it personally, I promise."
