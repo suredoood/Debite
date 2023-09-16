@@ -25,8 +25,8 @@ flatpak install flathub com.valvesoftware.Steam
 
 ### Configure Flatpak to have access to icons and themes
 flatpak --user override --filesystem=/home/$USER/.icons/:ro
-flatpak --user override --filesystem=/usr/share/icons/:to
-flatpak --user override --filesystem=/home/$USER/.themes
+flatpak --user override --filesystem=/usr/share/icons/:ro
+flatpak --user override --filesystem=/home/$USER/.themes/:ro
 
 #### Install Grub Customizer (removed for now)
 
