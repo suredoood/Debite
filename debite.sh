@@ -23,6 +23,10 @@ sudo flatpak install flathub com.discordapp.Discord
 
 flatpak install flathub com.valvesoftware.Steam
 
+#### Install flatseal (GUI for managing flathub permissions)
+
+flatpak install flathub com.github.tchx84.Flatseal
+
 ### Configure Flatpak to have access to icons and themes
 flatpak --user override --filesystem=/home/$USER/.icons/:ro
 flatpak --user override --filesystem=/usr/share/icons/:ro
